@@ -1,23 +1,26 @@
 function calcularMediaAritmetica() {
+
   const inputLista = document.getElementById("Notas");
   const valueLista = inputLista.value;
-  const resultado = valueLista.split(" ");
+  let resultado = valueLista.split(" ");
   
 
-  let sumaLista = 0;
-  for (let i = 0; i < resultado.length; i++) {
-    resultado[i] = parseInt(resultado[i])
-    sumaLista = sumaLista + resultado[i];
-    
-    console.log(resultado);
-    console.log(sumaLista);
-  }
+  // let sumaLista = 0;
+  // for (let i = 0; i < resultado.length; i++) {
+  //   resultado[i] = parseInt(resultado[i])
+  //   sumaLista = sumaLista + resultado[i];
+  //    }
 
-  // const sumaLista = resultado.reduce(
-  //    function (valorAcumulado = 0, nuevoElemento) {
-  //     return valorAcumulado + nuevoElemento;
-  //   }
-  // );
+    for (let i = 0; i < resultado.length; i++) {
+    resultado[i] = parseInt(resultado[i])
+    
+     }
+
+  const sumaLista = resultado.reduce(
+     function (valorAcumulado = 0, nuevoElemento) {
+      return valorAcumulado + nuevoElemento;
+    }
+  );
 
   const promedioLista = sumaLista / resultado.length;
 
