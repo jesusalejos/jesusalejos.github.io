@@ -5,10 +5,56 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Salarios</title>
+
+  <style>
+
+    #lista, #lista2 {
+      width: auto;
+      height: 100%;
+      border: 1px solid #343434;
+      display: inline-block;
+    }
+  </style>
 </head>
 <body>
-  <h1>Salarios</h1>
-  
+
+  <header>
+    <h1>Estudio de salarios</h1>
+  </header>
+
+  <section>
+    <h2>Ingresar nombres y salarios (se añadirán a la base de datos)</h2>
+    <form action="">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre">
+
+        <label for="salario">Salario</label>
+        <input type="text" id="salario">
+
+        <input type="button" value="enviar" onclick="nuevosElementos()">
+
+    <p id="lista"></p>
+    <p id="lista2"></p>
+    </form>
+
+  </section>
+
+  <section>
+
+    <h2>Mediana general</h2>
+    <form action="">
+      <button type="button" onclick="mediaGeneral()">MG</button>
+      <p id="mediaG"></p>
+    </form>
+  </section>
+    
+  <h2>Mediana Top 10</h2>
+  <form action="">
+    <button type="button" onclick="mediaTop10()">MTop</button>
+    <p id="top"></p>
+  </form>
+</section>
+
   <script src="./salarios.js"></script>
   <script src="./analisis.js"></script>
 </body>

@@ -79,3 +79,33 @@ colombia.push({
   name: "Bill Gates",
   salary: 100000000,
 });
+
+
+let lista = document.getElementById("lista");
+let lista2 = document.getElementById("lista2");
+
+function nuevosElementos(){
+  let nombre = document.getElementById("nombre").value;
+  let salario = document.getElementById("salario").value;
+  salario = parseInt(salario);
+      
+  
+  colombia.push({
+    name: nombre,
+    salary: salario,
+  });
+
+  console.log(colombia);
+
+  const salariosCol = colombia.map(
+    function (personita) {
+      return personita.salary;
+    }
+  );
+
+  console.log(salariosCol.length);
+  lista.innerHTML = `Èsta es la lista de salarios:  ${salariosCol.slice(0, salariosCol.length - 10)}`;
+  lista2.innerHTML = `${salariosCol.slice(11)}`;
+
+  
+}
